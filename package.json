@@ -1,0 +1,28 @@
+{
+  "name": "clases",
+  "version": "1.0.0",
+  "description": "Quick vue hack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Gahen/clases.git"
+  },
+  "author": "Joaquín Omar Tumas <j.tumas@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gahen/clases/issues"
+  },
+  "homepage": "https://github.com/Gahen/clases#readme",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "popper": "^1.0.0",
+    "popper.js": "^1.12.3",
+    "vue": "^2.4.2"
+  },
+  "dependencies": {
+    "bootstrap-vue": "^0.22.1"
+  }
+}

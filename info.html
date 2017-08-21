@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,16 +29,16 @@
       lang = lang ? lang[1] : 'pt';
       document.write('<script src="locale.'+lang+'.js"></'+'script>')
     </script>
-</head>
-<body>
-  <div id="app">
+  </head>
+
+  <body>
+    <div id="app">
     <div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block">{{ locale.title }}</div>
     <div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-white mb-5 d-none d-lg-block">
         <a href="tel:+541124014128">WhatsApp: +54 11 2401 4128</a> | 
         <a href="https://www.facebook.com/rirranna">Facebook</a> |
         <a :href="'mailto:samsam.andreatta+clases_'+locale.lang+'@gmail.com'">Email</a>
     </div>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-faded py-lg-4">
       <div class="container">
@@ -47,13 +48,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item active px-lg-4">
+            <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="index.html">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="info.html">Info</a>
+            <li class="nav-item active px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="about.html">Info</a>
             </li>
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="contact.html">Contact</a>
@@ -64,29 +65,48 @@
     </nav>
 
     <div class="container">
+
       <div class="bg-faded p-4 my-4">
-        <!-- Welcome Message -->
-        <div class="text-center mt-4">
-          <h1 class="my-2">{{ locale.title }}</h1>
-          <div class="text-heading text-muted text-lg">{{ locale.by }}
-            <strong>
-              Sam Andreatta
-            </strong>
+        <hr class="divider">
+        <h2 class="text-center text-lg text-uppercase my-0"><strong>INFO</strong>
+        </h2>
+        <hr class="divider">
+        <div class="row">
+         <div class="col-lg-6">
+		<div class="bg-faded p-4 my-4">
+			<hr class="divider">
+			<h2 class="text-center text-lg text-uppercase my-0" v-html="locale.me_title">
+			</h2>
+			<hr class="divider">	
+			<p>{{locale.me}}</p>
+		      </div>
+
+		      <div class="bg-faded p-4 my-4">
+			<hr class="divider">
+			<h2 class="text-center text-lg text-uppercase my-0" v-html="locale.how_title">
+			</h2>
+			<hr class="divider">
+			<p>{{ locale.how }}</p>
+		      </div>
+
+		      <div class="bg-faded p-4 my-4">
+			<hr class="divider">
+			<h2 class="text-center text-lg text-uppercase my-0" v-html="locale.who_title">
+			</h2>
+			<hr class="divider">
+			<p>{{ locale.who }}</p>
+		      </div>
+
+		      <div class="bg-faded p-4 my-4">
+			<hr class="divider">
+			<h2 class="text-center text-lg text-uppercase my-0" v-html="locale.howmuch_title">
+			</h2>
+			<hr class="divider">
+			<p>{{ locale.howmuch }}</p>
+		      </div>
           </div>
         </div>
       </div>
-
-      <div class="bg-faded p-4 my-4">
-        <hr class="divider">
-        <h2 class="text-center text-lg text-uppercase my-0" v-html="locale.learn_title">
-        </h2>
-        <hr class="divider">
-        <img class="img-fluid float-left mr-4 d-none d-lg-block" src="img/intro-pic.jpg" alt="">
-        <p v-html="locale.learn"></p>
-        <p>{{locale.info}}</p>
-      </div>
-
-   
     </div>
     <!-- /.container -->
 
@@ -95,11 +115,12 @@
         <p class="m-0">Copyright &copy; Sam Andreatta 2017</p>
       </div>
     </footer>
-  </div>
 
   <script src="index.js"></script>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/popper/popper.min.js"></script>
-</body>
+</div>
+  </body>
+
 </html>

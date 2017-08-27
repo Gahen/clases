@@ -18,6 +18,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/business-casual.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
     <script src="node_modules/vue/dist/vue.min.js"></script>
     <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
@@ -33,9 +34,21 @@
   <div id="app">
     <div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block">{{ locale.title }}</div>
     <div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-white mb-5 d-none d-lg-block">
-        <a href="tel:+541124014128">WhatsApp: +54 11 2401 4128</a> | 
-        <a href="https://www.facebook.com/rirranna">Facebook</a> |
-        <a :href="'mailto:samsam.andreatta+clases_'+locale.lang+'@gmail.com'">Email</a>
+        <a class="title" href="tel:+541124014128">
+          <svg class="icon" id="i-mobile" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M21 2 L11 2 C10 2 9 3 9 4 L9 28 C9 29 10 30 11 30 L21 30 C22 30 23 29 23 28 L23 4 C23 3 22 2 21 2 Z M9 5 L23 5 M9 27 L23 27" />
+          </svg>
+          +54 11 2401 4128</a> | 
+        <a class="title" href="https://www.facebook.com/rirranna">
+          <svg class="icon" id="i-send" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M2 16 L30 2 16 30 12 20 Z M30 2 L12 20" />
+          </svg>
+          https://www.facebook.com/rirranna</a> |
+        <a class="title" :href="'mailto:samsam.andreatta+clases_'+locale.lang+'@gmail.com'">
+          <svg class="icon" id="i-mail" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M2 26 L30 26 30 6 2 6 Z M2 6 L16 16 30 6" />
+          </svg>
+          samsam.andreatta@gmail.com</a>
     </div>
 
     <!-- Navigation -->
